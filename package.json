@@ -11,13 +11,9 @@
     "lint:fix": "stylelint --fix ./**/*.scss",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.scss": "yarn lint:fix"
+    "*.scss": "yarn lint:fix",
+    "*.{js,css,md}": "prettier --write"
   },
   "devDependencies": {
     "husky": "^7.0.0",
